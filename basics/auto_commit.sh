@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cd /Users/ayushbisht/basics
+cd /Users/ayushbisht/JAVASCRIPT/basics
 
 git add .
 
