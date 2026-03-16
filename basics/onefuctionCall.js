@@ -4,6 +4,7 @@ var once = fucntion (fn) {
     return function (...args) {
 
         if (!called)
+            
 
 
 
