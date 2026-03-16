@@ -1,3 +1,5 @@
+const fn = (a, b, c) => a + b + c;
+
 var once = function (fn) {
   let called = false;
 
@@ -6,9 +8,11 @@ var once = function (fn) {
       called = true;
       return fn(...args);
     }
-
     return undefined;
   };
 };
 
-once(2, 3, 4);
+const onceFn = once(fn);
+
+console.log(onceFn(1, 2, 3));
+console.log(onceFn(2, 3, 6));
