@@ -1,15 +1,14 @@
-var once = fucntion (fn) {
-    let called = false;
+var once = function (fn) {
+  let called = false;
 
-    return function (...args) {
-
-        if (!called)
-            
-
-
-
-
+  return function (...args) {
+    if (!called) {
+      called = true;
+      return fn(...args);
     }
-    once(2,3,4)
 
+    return undefined;
+  };
 };
+
+once(2, 3, 4);
