@@ -14,3 +14,5 @@ function memoize() {
     return result;
   };
 }
+
+fn(2, 3);
