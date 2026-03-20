@@ -1,0 +1,1176 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kerala Honeymoon Plan – Bhai ke liye</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --green-dark: #1a3a2a;
+        --green-mid: #2d6a4f;
+        --green-light: #52b788;
+        --cream: #fdf8f0;
+        --gold: #c9a84c;
+        --coral: #e07a5f;
+        --text: #1c1c1c;
+        --muted: #6b7280;
+        --card: #ffffff;
+        --border: #e8e0d0;
+        --plan-a: #2d6a4f;
+        --plan-b: #b5541c;
+        --plan-c: #6b3a8c;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "DM Sans", sans-serif;
+        background: var(--cream);
+        color: var(--text);
+        min-height: 100vh;
+      }
+
+      /* HEADER */
+      .header {
+        background: var(--green-dark);
+        color: white;
+        padding: 48px 40px 36px;
+        position: relative;
+        overflow: hidden;
+      }
+      .header::before {
+        content: "";
+        position: absolute;
+        top: -60px;
+        right: -60px;
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+        background: rgba(82, 183, 136, 0.12);
+      }
+      .header::after {
+        content: "";
+        position: absolute;
+        bottom: -80px;
+        left: 30%;
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        background: rgba(201, 168, 76, 0.08);
+      }
+      .header-tag {
+        font-family: "DM Mono", monospace;
+        font-size: 11px;
+        letter-spacing: 3px;
+        color: var(--green-light);
+        text-transform: uppercase;
+        margin-bottom: 12px;
+      }
+      .header h1 {
+        font-family: "Playfair Display", serif;
+        font-size: clamp(28px, 5vw, 46px);
+        font-weight: 900;
+        line-height: 1.15;
+        margin-bottom: 10px;
+      }
+      .header h1 span {
+        color: var(--gold);
+      }
+      .header-sub {
+        font-size: 15px;
+        color: rgba(255, 255, 255, 0.65);
+        font-weight: 300;
+        margin-top: 8px;
+      }
+      .priority-banner {
+        margin-top: 24px;
+        background: rgba(201, 168, 76, 0.15);
+        border: 1px solid rgba(201, 168, 76, 0.4);
+        border-left: 4px solid var(--gold);
+        border-radius: 8px;
+        padding: 14px 18px;
+        display: flex;
+        align-items: flex-start;
+        gap: 12px;
+      }
+      .priority-banner .icon {
+        font-size: 20px;
+        margin-top: 2px;
+      }
+      .priority-banner p {
+        font-size: 14px;
+        line-height: 1.6;
+        color: rgba(255, 255, 255, 0.85);
+      }
+      .priority-banner strong {
+        color: var(--gold);
+      }
+
+      /* MAIN */
+      .main {
+        max-width: 860px;
+        margin: 0 auto;
+        padding: 40px 24px 80px;
+      }
+
+      /* SECTION TITLE */
+      .section-label {
+        font-family: "DM Mono", monospace;
+        font-size: 10px;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        color: var(--muted);
+        margin-bottom: 8px;
+      }
+      .section-title {
+        font-family: "Playfair Display", serif;
+        font-size: 22px;
+        font-weight: 700;
+        color: var(--green-dark);
+        margin-bottom: 24px;
+        padding-bottom: 12px;
+        border-bottom: 2px solid var(--border);
+      }
+
+      /* PRIORITY 1 – FLIGHTS */
+      .flight-card {
+        background: var(--green-dark);
+        border-radius: 16px;
+        padding: 28px;
+        color: white;
+        margin-bottom: 40px;
+        position: relative;
+        overflow: hidden;
+      }
+      .flight-card::after {
+        content: "✈";
+        position: absolute;
+        right: 28px;
+        top: 20px;
+        font-size: 64px;
+        opacity: 0.07;
+      }
+      .flight-card .badge {
+        display: inline-block;
+        background: var(--gold);
+        color: var(--green-dark);
+        font-size: 10px;
+        font-weight: 700;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        padding: 4px 12px;
+        border-radius: 20px;
+        margin-bottom: 16px;
+      }
+      .flight-row {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        margin: 14px 0;
+        background: rgba(255, 255, 255, 0.07);
+        border-radius: 10px;
+        padding: 14px 18px;
+      }
+      .flight-row .city {
+        font-family: "Playfair Display", serif;
+        font-size: 20px;
+        font-weight: 700;
+      }
+      .flight-row .code {
+        font-family: "DM Mono", monospace;
+        font-size: 11px;
+        color: var(--green-light);
+        margin-top: 2px;
+      }
+      .flight-arrow {
+        flex: 1;
+        text-align: center;
+        font-size: 22px;
+        color: var(--gold);
+      }
+      .flight-date {
+        font-size: 13px;
+        color: rgba(255, 255, 255, 0.55);
+        margin-top: 2px;
+      }
+      .flight-note {
+        margin-top: 16px;
+        font-size: 13px;
+        color: rgba(255, 255, 255, 0.6);
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        padding-top: 14px;
+        line-height: 1.7;
+      }
+      .flight-note strong {
+        color: var(--gold);
+      }
+
+      /* DECISION BOX */
+      .decision-box {
+        background: #fffbf2;
+        border: 2px solid var(--gold);
+        border-radius: 16px;
+        padding: 24px 28px;
+        margin-bottom: 32px;
+      }
+      .decision-box h3 {
+        font-family: "Playfair Display", serif;
+        font-size: 18px;
+        color: var(--green-dark);
+        margin-bottom: 16px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      .decision-row {
+        display: flex;
+        gap: 12px;
+        margin: 10px 0;
+        align-items: flex-start;
+      }
+      .decision-row .pill {
+        flex-shrink: 0;
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        padding: 4px 12px;
+        border-radius: 20px;
+        margin-top: 1px;
+      }
+      .pill-evening {
+        background: #fde8d8;
+        color: #b5541c;
+      }
+      .pill-afternoon {
+        background: #d8f0e8;
+        color: #1a5c3a;
+      }
+      .decision-row p {
+        font-size: 14px;
+        line-height: 1.6;
+        color: var(--text);
+      }
+      .decision-row strong {
+        color: var(--green-dark);
+      }
+
+      /* PLAN TABS */
+      .tabs {
+        display: flex;
+        gap: 8px;
+        margin-bottom: 0;
+        flex-wrap: wrap;
+      }
+      .tab-btn {
+        font-family: "DM Sans", sans-serif;
+        font-size: 13px;
+        font-weight: 600;
+        padding: 10px 20px;
+        border-radius: 10px 10px 0 0;
+        border: none;
+        cursor: pointer;
+        transition: all 0.2s;
+        border: 2px solid transparent;
+        border-bottom: none;
+        position: relative;
+        bottom: -2px;
+      }
+      .tab-btn[data-plan="A"] {
+        background: #e8f4ee;
+        color: var(--plan-a);
+      }
+      .tab-btn[data-plan="A"].active {
+        background: white;
+        border-color: #c0ddd0;
+        color: var(--plan-a);
+        font-weight: 700;
+      }
+      .tab-btn[data-plan="B"] {
+        background: #faeae3;
+        color: var(--plan-b);
+      }
+      .tab-btn[data-plan="B"].active {
+        background: white;
+        border-color: #f0c8b4;
+        color: var(--plan-b);
+        font-weight: 700;
+      }
+      .tab-btn[data-plan="C"] {
+        background: #f0e8f8;
+        color: var(--plan-c);
+      }
+      .tab-btn[data-plan="C"].active {
+        background: white;
+        border-color: #d4b8ec;
+        color: var(--plan-c);
+        font-weight: 700;
+      }
+
+      .plan-panels {
+        border: 2px solid var(--border);
+        border-radius: 0 12px 12px 12px;
+        background: white;
+        overflow: hidden;
+      }
+      .plan-panel {
+        display: none;
+        padding: 28px;
+      }
+      .plan-panel.active {
+        display: block;
+      }
+
+      .plan-header {
+        display: flex;
+        align-items: flex-start;
+        gap: 16px;
+        margin-bottom: 24px;
+        padding-bottom: 18px;
+        border-bottom: 1px solid var(--border);
+      }
+      .plan-badge {
+        font-size: 28px;
+        font-weight: 900;
+        font-family: "Playfair Display", serif;
+        width: 52px;
+        height: 52px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+      }
+      .badge-A {
+        background: #e8f4ee;
+        color: var(--plan-a);
+      }
+      .badge-B {
+        background: #faeae3;
+        color: var(--plan-b);
+      }
+      .badge-C {
+        background: #f0e8f8;
+        color: var(--plan-c);
+      }
+      .plan-header-text h2 {
+        font-family: "Playfair Display", serif;
+        font-size: 20px;
+        font-weight: 700;
+        margin-bottom: 4px;
+      }
+      .plan-header-text p {
+        font-size: 13px;
+        color: var(--muted);
+        line-height: 1.5;
+      }
+
+      /* TIMELINE */
+      .timeline {
+        position: relative;
+      }
+      .timeline::before {
+        content: "";
+        position: absolute;
+        left: 22px;
+        top: 0;
+        bottom: 0;
+        width: 2px;
+        background: linear-gradient(to bottom, var(--border), transparent);
+      }
+      .day-item {
+        display: flex;
+        gap: 18px;
+        margin-bottom: 20px;
+        position: relative;
+      }
+      .day-dot {
+        width: 46px;
+        height: 46px;
+        border-radius: 50%;
+        flex-shrink: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: "DM Mono", monospace;
+        font-size: 11px;
+        font-weight: 700;
+        border: 2px solid var(--border);
+        background: white;
+        color: var(--muted);
+        position: relative;
+        z-index: 1;
+      }
+      .day-dot.highlight-A {
+        border-color: var(--plan-a);
+        background: #e8f4ee;
+        color: var(--plan-a);
+      }
+      .day-dot.highlight-B {
+        border-color: var(--plan-b);
+        background: #faeae3;
+        color: var(--plan-b);
+      }
+      .day-dot.highlight-C {
+        border-color: var(--plan-c);
+        background: #f0e8f8;
+        color: var(--plan-c);
+      }
+      .day-content {
+        background: #f9f7f3;
+        border-radius: 12px;
+        padding: 14px 18px;
+        flex: 1;
+        border: 1px solid var(--border);
+      }
+      .day-content .dest {
+        font-weight: 600;
+        font-size: 15px;
+        color: var(--green-dark);
+        margin-bottom: 4px;
+      }
+      .day-content .detail {
+        font-size: 13px;
+        color: var(--muted);
+        line-height: 1.6;
+      }
+      .day-content .detail strong {
+        color: var(--text);
+      }
+      .day-content .tag {
+        display: inline-block;
+        font-size: 10px;
+        font-weight: 600;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        padding: 2px 8px;
+        border-radius: 10px;
+        margin-top: 6px;
+        margin-right: 4px;
+      }
+      .tag-stay {
+        background: #d8f0e8;
+        color: #1a5c3a;
+      }
+      .tag-drive {
+        background: #e8f0ff;
+        color: #3a4a8c;
+      }
+      .tag-highlight {
+        background: #fde8c0;
+        color: #7a4800;
+      }
+      .tag-fly {
+        background: #fde8d8;
+        color: #8c2000;
+      }
+      .tag-kanya {
+        background: #f0e8f8;
+        color: #5a2080;
+      }
+
+      /* ROUTE STRIP */
+      .route-strip {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 0;
+        margin: 16px 0 24px;
+        font-size: 12px;
+        font-weight: 600;
+        color: var(--muted);
+      }
+      .route-strip .stop {
+        padding: 6px 12px;
+        background: white;
+        border: 1.5px solid var(--border);
+        border-radius: 20px;
+        color: var(--green-dark);
+        font-size: 12px;
+        font-weight: 600;
+        white-space: nowrap;
+      }
+      .route-strip .stop.key {
+        border-color: var(--green-light);
+        background: #e8f4ee;
+      }
+      .route-strip .arrow {
+        padding: 0 4px;
+        font-size: 14px;
+      }
+
+      /* TIPS */
+      .tips-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+        gap: 14px;
+        margin-top: 40px;
+      }
+      .tip-card {
+        background: white;
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        padding: 18px;
+      }
+      .tip-card .tip-icon {
+        font-size: 22px;
+        margin-bottom: 8px;
+      }
+      .tip-card h4 {
+        font-size: 13px;
+        font-weight: 700;
+        color: var(--green-dark);
+        margin-bottom: 6px;
+      }
+      .tip-card p {
+        font-size: 12px;
+        color: var(--muted);
+        line-height: 1.6;
+      }
+
+      /* FOOTER */
+      .footer {
+        text-align: center;
+        padding: 32px 24px;
+        background: var(--green-dark);
+        color: rgba(255, 255, 255, 0.5);
+        font-size: 12px;
+        margin-top: 60px;
+      }
+      .footer strong {
+        color: var(--green-light);
+      }
+
+      @media (max-width: 600px) {
+        .header {
+          padding: 32px 20px 28px;
+        }
+        .main {
+          padding: 28px 16px 60px;
+        }
+        .flight-row {
+          flex-wrap: wrap;
+          gap: 10px;
+        }
+        .flight-arrow {
+          flex: none;
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <div class="header-tag">📍 Honeymoon Planning Note</div>
+      <h1>Kerala Trip<br /><span>Bhai, yeh padh ek baar 🙏</span></h1>
+      <div class="header-sub">
+        Delhi → Kochi → [Route] → Trivandrum → Delhi &nbsp;|&nbsp; 3 April – 10
+        April 2025 &nbsp;|&nbsp; 7 Nights 8 Days
+      </div>
+
+      <div class="priority-banner">
+        <div class="icon">⚡</div>
+        <p>
+          <strong>PRIORITY #1 — Book Flights First.</strong> Everything else
+          depends on what time we land in Kochi. The route plan is flexible —
+          the flight time decides which of the 3 plans below we follow. So book
+          tickets ASAP and then we'll lock the plan.
+        </p>
+      </div>
+    </div>
+
+    <div class="main">
+      <!-- =================== PRIORITY 1: FLIGHTS =================== -->
+      <div class="section-label">Priority 1 of 2</div>
+      <div class="section-title">✈️ Flight Booking</div>
+
+      <div class="flight-card">
+        <div class="badge">🔴 Book This First</div>
+
+        <div class="flight-row">
+          <div>
+            <div class="city">Delhi</div>
+            <div class="code">DEL — IGI Airport</div>
+            <div class="flight-date">
+              3 April 2025 — Morning flight preferred
+            </div>
+          </div>
+          <div class="flight-arrow">→</div>
+          <div>
+            <div class="city">Kochi</div>
+            <div class="code">COK — Cochin Intl Airport</div>
+            <div class="flight-date">
+              Arrive before 2 PM = Plan B/C &nbsp;|&nbsp; After 4 PM = Plan A
+            </div>
+          </div>
+        </div>
+
+        <div class="flight-row">
+          <div>
+            <div class="city">Trivandrum</div>
+            <div class="code">TRV — Trivandrum Intl Airport</div>
+            <div class="flight-date">
+              10 April 2025 — Evening flight preferred
+            </div>
+          </div>
+          <div class="flight-arrow">→</div>
+          <div>
+            <div class="city">Delhi</div>
+            <div class="code">DEL — IGI Airport</div>
+            <div class="flight-date">Return home</div>
+          </div>
+        </div>
+
+        <div class="flight-note">
+          ⚠️ <strong>Important:</strong> Book
+          <strong>Kochi (DEL→COK)</strong> for 3 April and
+          <strong>Trivandrum return (TRV→DEL)</strong> for 10 April evening. We
+          fly INTO Kochi and fly OUT from Trivandrum — this is a one-way
+          circuit, not a round trip from the same city. Check IndiGo, Air India,
+          and Vistara for best fares. Flight duration ~2.5 hrs.
+        </div>
+      </div>
+
+      <!-- =================== PRIORITY 2: DECISION POINT =================== -->
+      <div class="section-label">Priority 2 of 2</div>
+      <div class="section-title">🔀 The Decision: What Time Do We Land?</div>
+
+      <div class="decision-box">
+        <h3>⏰ Arrival Time = Which Plan We Follow</h3>
+        <div class="decision-row">
+          <div class="pill pill-evening">Evening Arrival<br />(After 4 PM)</div>
+          <p>
+            Stay in Kochi tonight. Rest. Fort Kochi evening walk.
+            <strong>→ Follow Plan A</strong>
+          </p>
+        </div>
+        <div class="decision-row">
+          <div class="pill pill-afternoon">
+            Afternoon Arrival<br />(Before 2 PM)
+          </div>
+          <p>
+            Skip Kochi stay. Drive straight to Munnar. Extra day gained!
+            <strong>→ Follow Plan B or Plan C</strong>
+          </p>
+        </div>
+      </div>
+
+      <!-- =================== PLAN TABS =================== -->
+      <div style="margin-bottom: 6px">
+        <div class="section-label">The 3 Plans — Click to Switch</div>
+      </div>
+
+      <div class="tabs">
+        <button class="tab-btn active" data-plan="A" onclick="showPlan('A')">
+          📌 Plan A — Late Arrival
+        </button>
+        <button class="tab-btn" data-plan="B" onclick="showPlan('B')">
+          🚀 Plan B — Early + Kanyakumari
+        </button>
+        <button class="tab-btn" data-plan="C" onclick="showPlan('C')">
+          ⚡ Plan C — Early, Skip Kanya
+        </button>
+      </div>
+
+      <div class="plan-panels">
+        <!-- ===== PLAN A ===== -->
+        <div class="plan-panel active" id="panel-A">
+          <div class="plan-header">
+            <div class="plan-badge badge-A">A</div>
+            <div class="plan-header-text">
+              <h2>Plan A — Arrived Late in Kochi (Evening)</h2>
+              <p>
+                We landed after 4 PM. Stay in Kochi tonight, then head to Munnar
+                next morning. Standard 8-day plan. No Kanyakumari.
+              </p>
+            </div>
+          </div>
+
+          <div class="route-strip">
+            <span class="stop key">Kochi</span><span class="arrow">→</span>
+            <span class="stop">Munnar</span><span class="arrow">→</span>
+            <span class="stop">Thekkady</span><span class="arrow">→</span>
+            <span class="stop">Alappuzha</span><span class="arrow">→</span>
+            <span class="stop">Varkala</span><span class="arrow">→</span>
+            <span class="stop">Kovalam</span><span class="arrow">→</span>
+            <span class="stop key">Trivandrum ✈️</span>
+          </div>
+
+          <div class="timeline">
+            <div class="day-item">
+              <div class="day-dot highlight-A">D1</div>
+              <div class="day-content">
+                <div class="dest">🏙️ Kochi — Fort Kochi Area</div>
+                <div class="detail">
+                  Landed evening. Check in to hotel. Chinese Fishing Nets at
+                  sunset. Kerala seafood dinner. Rest.<br /><strong
+                    >Recommended stay:</strong
+                  >
+                  Old Harbour Hotel / Malabar House
+                </div>
+                <span class="tag tag-stay">1 Night</span>
+              </div>
+            </div>
+
+            <div class="day-item">
+              <div class="day-dot">D2</div>
+              <div class="day-content">
+                <div class="dest">🌿 Munnar — Drive from Kochi</div>
+                <div class="detail">
+                  ~4 hr scenic drive through Western Ghats. Arrive afternoon.
+                  Check in, rest. Evening tea garden walk.<br /><strong
+                    >Recommended stay:</strong
+                  >
+                  Windermere Estate / Fragrant Nature
+                </div>
+                <span class="tag tag-drive">~4 hrs drive</span
+                ><span class="tag tag-stay">Night 1 of 2</span>
+              </div>
+            </div>
+
+            <div class="day-item">
+              <div class="day-dot">D3</div>
+              <div class="day-content">
+                <div class="dest">🏔️ Munnar — Full Exploration Day</div>
+                <div class="detail">
+                  Eravikulam National Park (morning, book in advance),
+                  Mattupetty Dam boating, Top Station sunset viewpoint, Echo
+                  Point.
+                </div>
+                <span class="tag tag-stay">Night 2 of 2</span
+                ><span class="tag tag-highlight">Crown Jewel</span>
+              </div>
+            </div>
+
+            <div class="day-item">
+              <div class="day-dot">D4</div>
+              <div class="day-content">
+                <div class="dest">
+                  🐘 Thekkady (Periyar) — Drive from Munnar
+                </div>
+                <div class="detail">
+                  ~3 hr drive. Afternoon: Spice plantation tour. Evening:
+                  Kathakali cultural show.
+                  <strong>Book 6 AM lake safari for next morning.</strong
+                  ><br /><strong>Recommended stay:</strong> Spice Village /
+                  Cardamom County
+                </div>
+                <span class="tag tag-drive">~3 hrs drive</span
+                ><span class="tag tag-stay">1 Night</span>
+              </div>
+            </div>
+
+            <div class="day-item">
+              <div class="day-dot">D5</div>
+              <div class="day-content">
+                <div class="dest">🛶 Alappuzha — Houseboat Night</div>
+                <div class="detail">
+                  6 AM Periyar Lake boat safari (elephants at dawn!). Then drive
+                  ~3 hrs to Alappuzha. Board premium houseboat by noon.
+                  Backwater cruise all afternoon. Sunset on water. Dinner cooked
+                  on board.<br /><strong
+                    >Book premium AC houseboat — mandatory in April
+                    heat.</strong
+                  >
+                </div>
+                <span class="tag tag-drive">~3 hrs drive</span
+                ><span class="tag tag-highlight">🌟 Trip Highlight</span>
+              </div>
+            </div>
+
+            <div class="day-item">
+              <div class="day-dot">D6</div>
+              <div class="day-content">
+                <div class="dest">🌊 Varkala — Cliff Beach</div>
+                <div class="detail">
+                  Checkout houseboat. Drive ~2.5 hrs to Varkala. Cliff-top
+                  resort check-in. Evening walk on the famous red laterite
+                  cliffs. Candlelit dinner with ocean views.<br /><strong
+                    >Recommended stay:</strong
+                  >
+                  Hindustan Beach Retreat
+                </div>
+                <span class="tag tag-drive">~2.5 hrs drive</span
+                ><span class="tag tag-stay">1 Night</span>
+              </div>
+            </div>
+
+            <div class="day-item">
+              <div class="day-dot">D7</div>
+              <div class="day-content">
+                <div class="dest">🏖️ Kovalam — Lighthouse Beach</div>
+                <div class="detail">
+                  Short 1.5 hr drive from Varkala. Afternoon at Lighthouse
+                  Beach. Couples Ayurvedic spa session (must-do!). Seafood
+                  dinner by the beach.<br /><strong>Recommended stay:</strong>
+                  Leela Kovalam / Taj Green Cove
+                </div>
+                <span class="tag tag-drive">~1.5 hrs drive</span
+                ><span class="tag tag-stay">1 Night</span>
+              </div>
+            </div>
+
+            <div class="day-item">
+              <div class="day-dot">D8</div>
+              <div class="day-content">
+                <div class="dest">✈️ Trivandrum — Fly back to Delhi</div>
+                <div class="detail">
+                  Morning beach breakfast. Visit Padmanabhaswamy Temple (carry
+                  traditional attire). ~30 min drive to Trivandrum airport.
+                  Evening flight to Delhi.
+                </div>
+                <span class="tag tag-fly">Fly Home</span
+                ><span class="tag tag-drive">~30 min to airport</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ===== PLAN B ===== -->
+        <div class="plan-panel" id="panel-B">
+          <div class="plan-header">
+            <div class="plan-badge badge-B">B</div>
+            <div class="plan-header-text">
+              <h2>Plan B — Arrived Early + Kanyakumari Included</h2>
+              <p>
+                We landed before 2 PM. Drive straight to Munnar. Bonus day = Add
+                Kanyakumari (southernmost tip of India) before Trivandrum.
+              </p>
+            </div>
+          </div>
+
+          <div class="route-strip">
+            <span class="stop key">Kochi ✈️</span><span class="arrow">→</span>
+            <span class="stop">Munnar</span><span class="arrow">→</span>
+            <span class="stop">Munnar</span><span class="arrow">→</span>
+            <span class="stop">Thekkady</span><span class="arrow">→</span>
+            <span class="stop">Alappuzha</span><span class="arrow">→</span>
+            <span class="stop">Varkala</span><span class="arrow">→</span>
+            <span class="stop">Kovalam</span><span class="arrow">→</span>
+            <span class="stop">Kanyakumari</span><span class="arrow">→</span>
+            <span class="stop key">Trivandrum ✈️</span>
+          </div>
+
+          <div class="timeline">
+            <div class="day-item">
+              <div class="day-dot highlight-B">D1</div>
+              <div class="day-content">
+                <div class="dest">🌿 Land in Kochi → Drive to Munnar</div>
+                <div class="detail">
+                  Land before 2 PM. Skip Kochi stay — drive straight to Munnar
+                  (~4 hrs). Arrive evening. Freshen up, rest, tea garden stroll.
+                </div>
+                <span class="tag tag-drive">~4 hrs drive</span
+                ><span class="tag tag-stay">Night 1 of 2</span>
+              </div>
+            </div>
+
+            <div class="day-item">
+              <div class="day-dot highlight-B">D2</div>
+              <div class="day-content">
+                <div class="dest">🏔️ Munnar — Full Day</div>
+                <div class="detail">
+                  Eravikulam National Park, Mattupetty Dam boating, Top Station,
+                  Echo Point. Full relaxed day in the hills.
+                </div>
+                <span class="tag tag-stay">Night 2 of 2</span
+                ><span class="tag tag-highlight">Crown Jewel</span>
+              </div>
+            </div>
+
+            <div class="day-item">
+              <div class="day-dot">D3</div>
+              <div class="day-content">
+                <div class="dest">🐘 Thekkady (Periyar)</div>
+                <div class="detail">
+                  ~3 hr drive from Munnar. Spice plantation, Kathakali show.
+                  Book morning lake safari for next day 6 AM.
+                </div>
+                <span class="tag tag-drive">~3 hrs</span
+                ><span class="tag tag-stay">1 Night</span>
+              </div>
+            </div>
+
+            <div class="day-item">
+              <div class="day-dot">D4</div>
+              <div class="day-content">
+                <div class="dest">🛶 Alappuzha — Houseboat</div>
+                <div class="detail">
+                  6 AM Periyar lake safari → Drive to Alappuzha (~3 hrs) → Board
+                  houseboat noon. Backwater sunset, dinner on board.
+                </div>
+                <span class="tag tag-highlight">🌟 Highlight</span>
+              </div>
+            </div>
+
+            <div class="day-item">
+              <div class="day-dot">D5</div>
+              <div class="day-content">
+                <div class="dest">🌊 Varkala</div>
+                <div class="detail">
+                  Checkout houseboat → Drive ~2.5 hrs to Varkala cliff. Evening
+                  sunset on the cliffs. Dinner with ocean views.
+                </div>
+                <span class="tag tag-stay">1 Night</span>
+              </div>
+            </div>
+
+            <div class="day-item">
+              <div class="day-dot">D6</div>
+              <div class="day-content">
+                <div class="dest">🏖️ Kovalam</div>
+                <div class="detail">
+                  ~1.5 hr drive. Lighthouse Beach. Couples Ayurvedic spa.
+                  Relaxed beach evening.
+                </div>
+                <span class="tag tag-stay">1 Night</span>
+              </div>
+            </div>
+
+            <div class="day-item">
+              <div class="day-dot highlight-B">D7</div>
+              <div class="day-content">
+                <div class="dest">
+                  🌅 Kanyakumari — Southernmost Tip of India
+                </div>
+                <div class="detail">
+                  ~2 hr drive from Kovalam. Vivekananda Rock Memorial (boat
+                  ride), Thiruvalluvar Statue, Sunrise/Sunset point where 3 seas
+                  meet (Arabian Sea + Bay of Bengal + Indian Ocean). Iconic
+                  landmark — especially beautiful for couples. Drive back to
+                  Trivandrum evening.
+                </div>
+                <span class="tag tag-kanya">Bonus Stop</span
+                ><span class="tag tag-drive">~2 hrs each way</span>
+              </div>
+            </div>
+
+            <div class="day-item">
+              <div class="day-dot">D8</div>
+              <div class="day-content">
+                <div class="dest">✈️ Trivandrum → Delhi</div>
+                <div class="detail">
+                  Padmanabhaswamy Temple (optional). ~30 min to airport. Evening
+                  flight home.
+                </div>
+                <span class="tag tag-fly">Fly Home</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ===== PLAN C ===== -->
+        <div class="plan-panel" id="panel-C">
+          <div class="plan-header">
+            <div class="plan-badge badge-C">C</div>
+            <div class="plan-header-text">
+              <h2>Plan C — Arrived Early, Skip Kanyakumari</h2>
+              <p>
+                We landed before 2 PM. Drive straight to Munnar. But we skip
+                Kanyakumari. Use that extra day for more relaxed stays or an
+                extended Kovalam beach day.
+              </p>
+            </div>
+          </div>
+
+          <div class="route-strip">
+            <span class="stop key">Kochi ✈️</span><span class="arrow">→</span>
+            <span class="stop">Munnar</span><span class="arrow">→</span>
+            <span class="stop">Munnar</span><span class="arrow">→</span>
+            <span class="stop">Thekkady</span><span class="arrow">→</span>
+            <span class="stop">Alappuzha</span><span class="arrow">→</span>
+            <span class="stop">Varkala</span><span class="arrow">→</span>
+            <span class="stop">Kovalam</span><span class="arrow">→</span>
+            <span class="stop key">Trivandrum ✈️</span>
+          </div>
+
+          <div class="timeline">
+            <div class="day-item">
+              <div class="day-dot highlight-C">D1</div>
+              <div class="day-content">
+                <div class="dest">🌿 Land in Kochi → Drive to Munnar</div>
+                <div class="detail">
+                  Land before 2 PM. Skip Kochi stay. Drive to Munnar (~4 hrs).
+                  Arrive evening, rest, settle in.
+                </div>
+                <span class="tag tag-drive">~4 hrs drive</span
+                ><span class="tag tag-stay">Night 1 of 2</span>
+              </div>
+            </div>
+
+            <div class="day-item">
+              <div class="day-dot highlight-C">D2</div>
+              <div class="day-content">
+                <div class="dest">🏔️ Munnar — Full Day Exploration</div>
+                <div class="detail">
+                  Eravikulam National Park, Mattupetty Dam, Top Station, Tea
+                  Museum. Full relaxed day — no rush.
+                </div>
+                <span class="tag tag-stay">Night 2 of 2</span
+                ><span class="tag tag-highlight">Crown Jewel</span>
+              </div>
+            </div>
+
+            <div class="day-item">
+              <div class="day-dot">D3</div>
+              <div class="day-content">
+                <div class="dest">🐘 Thekkady (Periyar)</div>
+                <div class="detail">
+                  ~3 hr drive. Periyar spice plantation, Kathakali show. Book 6
+                  AM safari slot for next morning.
+                </div>
+                <span class="tag tag-stay">1 Night</span>
+              </div>
+            </div>
+
+            <div class="day-item">
+              <div class="day-dot">D4</div>
+              <div class="day-content">
+                <div class="dest">🛶 Alappuzha — Houseboat Night</div>
+                <div class="detail">
+                  6 AM Periyar lake safari → Drive ~3 hrs → Board houseboat.
+                  Backwater sunset and dinner on board.
+                </div>
+                <span class="tag tag-highlight">🌟 Highlight</span>
+              </div>
+            </div>
+
+            <div class="day-item">
+              <div class="day-dot">D5</div>
+              <div class="day-content">
+                <div class="dest">🌊 Varkala — Cliff Beach</div>
+                <div class="detail">
+                  ~2.5 hrs drive. Cliff walk, sunset dinner. Most dramatic beach
+                  in Kerala.
+                </div>
+                <span class="tag tag-stay">1 Night</span>
+              </div>
+            </div>
+
+            <div class="day-item">
+              <div class="day-dot highlight-C">D6</div>
+              <div class="day-content">
+                <div class="dest">🏖️ Kovalam — Extended Beach Day (Bonus!)</div>
+                <div class="detail">
+                  ~1.5 hrs drive. Since we skipped Kanyakumari, we have an EXTRA
+                  full day at Kovalam. Morning swim, afternoon Ayurvedic spa for
+                  both, evening at Lighthouse Beach. Totally relaxed last full
+                  day — the perfect honeymoon ending.
+                </div>
+                <span class="tag tag-stay">Night 1 of 2</span
+                ><span class="tag tag-highlight">Bonus Rest Day</span>
+              </div>
+            </div>
+
+            <div class="day-item">
+              <div class="day-dot">D7</div>
+              <div class="day-content">
+                <div class="dest">🏖️ Kovalam — Leisure Day</div>
+                <div class="detail">
+                  Full free day. Beach, pool, spa, local market. No driving, no
+                  sightseeing — just be. Perfect pre-flight rest.
+                </div>
+                <span class="tag tag-stay">Night 2 of 2</span>
+              </div>
+            </div>
+
+            <div class="day-item">
+              <div class="day-dot">D8</div>
+              <div class="day-content">
+                <div class="dest">✈️ Trivandrum → Delhi</div>
+                <div class="detail">
+                  Checkout Kovalam. Padmanabhaswamy Temple visit (optional). ~30
+                  min to airport. Evening flight to Delhi.
+                </div>
+                <span class="tag tag-fly">Fly Home</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- =================== TIPS =================== -->
+      <div style="margin-top: 48px">
+        <div class="section-label">Good to Know</div>
+        <div class="section-title">💡 Quick Tips for Bhai</div>
+      </div>
+
+      <div class="tips-grid">
+        <div class="tip-card">
+          <div class="tip-icon">🛶</div>
+          <h4>Book Houseboat Early</h4>
+          <p>
+            Premium AC houseboats fill up fast in April. Book at least 3 weeks
+            in advance. Must be AC — April is hot.
+          </p>
+        </div>
+        <div class="tip-card">
+          <div class="tip-icon">🌿</div>
+          <h4>Eravikulam Entry</h4>
+          <p>
+            Book Eravikulam National Park tickets online in advance — they limit
+            daily visitors and it sells out.
+          </p>
+        </div>
+        <div class="tip-card">
+          <div class="tip-icon">🐘</div>
+          <h4>Periyar Safari Timing</h4>
+          <p>
+            Only the 6 AM slot gives good wildlife sightings. The afternoon slot
+            is mostly just water views.
+          </p>
+        </div>
+        <div class="tip-card">
+          <div class="tip-icon">🌡️</div>
+          <h4>April Weather</h4>
+          <p>
+            Kochi/Alappuzha/Varkala = 33–36°C, pack light cotton.
+            Munnar/Thekkady = 22–26°C, pleasant and cool.
+          </p>
+        </div>
+        <div class="tip-card">
+          <div class="tip-icon">🕍</div>
+          <h4>Padmanabhaswamy Temple</h4>
+          <p>
+            Mandatory dress code — men in dhoti, women in saree or salwar. No
+            entry in western clothes.
+          </p>
+        </div>
+        <div class="tip-card">
+          <div class="tip-icon">💆</div>
+          <h4>Couples Ayurvedic Spa</h4>
+          <p>
+            Do this in Kovalam — Kerala Ayurveda is world-class. Book a 90-min
+            couples package at the resort.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      Made with ❤️ for your honeymoon planning &nbsp;|&nbsp;
+      <strong>First task: Book the flights. Rest can wait.</strong>
+    </div>
+
+    <script>
+      function showPlan(plan) {
+        document
+          .querySelectorAll(".tab-btn")
+          .forEach((b) => b.classList.remove("active"));
+        document
+          .querySelectorAll(".plan-panel")
+          .forEach((p) => p.classList.remove("active"));
+        document.querySelector(`[data-plan="${plan}"]`).classList.add("active");
+        document.getElementById(`panel-${plan}`).classList.add("active");
+      }
+    </script>
+  </body>
+</html>
