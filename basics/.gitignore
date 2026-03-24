@@ -1,2 +1,9 @@
-auto_commit.sh
+# Logs
 cron.log
+
+# Scripts (optional)
+auto_commit.sh
+
+# Node / system
+node_modules/
+.DS_Store
