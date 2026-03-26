@@ -5,6 +5,6 @@ var cancellable = function (fn, args, t) {
         fn(...args)
     }, t)
 
-    let cancelFn = () => clearInterval (Timer);
-    return cancelFn; 
+    let cancelFn = () => clearInterval (Timer)
+    return cancelFn 
 };
