@@ -1,9 +1,10 @@
 var cancellable = function (fn, args, t) {
     fn(...args)
-    setInterval()( =>
+    let Timer = setInterval()( =>
     {
         fn(...args)
     }, t)
-    
 
+    let cancelFn = () => clearInterval (Timer);
+    return cancelFn; 
 };
